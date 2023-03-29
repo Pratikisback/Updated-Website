@@ -1,0 +1,81 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>{% block Title %}YOLO-Mag{% endblock Title %}</title>
+		<meta name="description" content="">
+		<meta name="keywords" content="">
+		<meta name="author" content="">
+
+		<link rel="stylesheet" href="{% static 'css/styles.css' %}">
+		<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+		<link rel="stylesheet" href="{% static 'css/bootstrap-grid.min.css' %}">
+		<link rel="stylesheet" href="{% static 'css/bootstrap-reboot.min.css' %}">\
+		<script>
+			.li {
+				display: inline;
+				margin: 0 10px;
+			}
+			li a {
+				display: block;
+				width: 60px;
+			}
+			ul {
+				list-style-type: none;
+				margin: 0;
+				padding: 0;
+				width: 200px;
+				background-color: white;
+			}
+			  
+			li a {
+				display: block;
+				color: #000;
+				padding: 8px 16px;
+				text-decoration: none;
+			}
+			  
+			  /* Change the link color on hover */
+			li a:hover {
+				background-color: #555;
+				color: white;
+			}
+
+			
+		</script>
+
+	</head>
+
+	<body class='relative pt-8'>
+		<nav class='p-4 bg-black bg-opacity-30 fixed top-0 left-0 w-full z-50'>
+			<ul>
+				<li>
+				    <a href="{% url 'music:home_page' %}">
+					    <h2 class='text-black text-xl font-semibold'>
+						    <span class='text-black-800 font-black'></span>YOLO-Mag Services
+					    </h2>
+
+			        </a>
+					
+					
+				</li>
+				
+				<li>
+					<a href="{% url 'music:contact_us' %}" class='text-black text-lg font-semibold'>Contact Us</a>
+				</li>
+			</ul>	
+
+		</nav>
+
+		{% block content %}
+		
+		{% endblock content %}
+
+
+	</body>
+
+</html>
